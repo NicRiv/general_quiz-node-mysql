@@ -9,9 +9,7 @@ import { pool } from '../db.js'
     try {
         const [res] = await pool.query(`
             INSERT INTO quiz VALUE
-                (1, 'pregunta 1', 'r1', 'r2', 'r3', 'r4'),
-                (2, 'pregunta 2', 'r1', 'r2', 'r3', 'r4'),
-                (3, 'pregunta 3', 'r1', 'r2', 'r3', 'r4')
+                (1, 'In what year was Jose de San Martin born?', '1777', '1778', '1779', '1780', '1778')
         `)
 
         if (res.affectedRows > 0) {
