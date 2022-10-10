@@ -14,11 +14,12 @@ import { pool } from '../db.js'
         const [res] = await pool.query(`
             CREATE TABLE IF NOT EXISTS quiz(
                 id INT(11) NOT NULL AUTO_INCREMENT, 
-                description VARCHAR(45) DEFAULT NULL,
+                description TEXT DEFAULT NULL,
                 q1 VARCHAR(90) DEFAULT NULL,
                 q2 VARCHAR(90) DEFAULT NULL,
                 q3 VARCHAR(90) DEFAULT NULL,
                 q4 VARCHAR(90) DEFAULT NULL,
+                answer VARCHAR(90) DEFAULT NULL,
                 PRIMARY KEY(id)
             ) 
         `)
